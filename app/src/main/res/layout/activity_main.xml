@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:id="@+id/main_act"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="25dp"
+                android:background="@drawable/bg_gradient">
+
+    <RelativeLayout android:id="@+id/mainContainer" android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:visibility="visible">
+
+
+        <LinearLayout
+                android:layout_width="66dp"
+                android:layout_height="69dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="61dp"
+                android:layout_marginLeft="61dp"
+                android:layout_marginTop="61dp"
+                android:layout_marginEnd="149dp"
+                android:layout_marginRight="149dp"
+                android:layout_marginBottom="-14dp"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:text="Detale"
+                    android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/go" android:layout_width="match_parent"
+                      android:layout_height="wrap_content" android:orientation="vertical"
+                      android:gravity="center">
+
+
+            <EditText
+                    android:id="@+id/inlocalization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/white"
+                    android:ems="10"
+                    android:hint="Miejscowość"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white" />
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+            <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DHAKA, BD"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout android:id="@+id/overviewContainer" android:layout_width="match_parent"
+                      android:layout_height="wrap_content" android:orientation="vertical"
+                      android:layout_centerInParent="true">
+
+            <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/wind" />
+
+            <TextView
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="29°C"
+                    android:textColor="#FFFFFF"
+                    android:textSize="90dp" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal" android:gravity="center">
+
+                <TextView
+                        android:id="@+id/temp_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Min Temp: 05:05 AM"
+                        android:textColor="#FFFFFF" />
+
+                <Space
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                <TextView
+                        android:id="@+id/temp_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Max Temp: 05:05 PM"
+                        android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <ProgressBar android:id="@+id/loader"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+                 android:visibility="gone" />
+
+    <TextView android:id="@+id/errorText" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:layout_centerInParent="true"
+              android:visibility="gone" android:text="Something went wrong"/>
+
+
+</RelativeLayout>
